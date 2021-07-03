@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/UserInterface/Transition/Fader.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Background/Background-Menu.png" type="Texture" id=2]
+[ext_resource path="res://src/UserInterface/Settings/Settings.gd" type="Script" id=3]
+[ext_resource path="res://assets/Background/BG-BoxMedium.png" type="Texture" id=4]
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fader" parent="." instance=ExtResource( 1 )]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Background" type="TextureRect" parent="Fader"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box-Background" type="TextureRect" parent="Fader/Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -211.5
+margin_top = -146.5
+margin_right = 211.5
+margin_bottom = 146.5
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
