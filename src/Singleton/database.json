@@ -1,0 +1,9 @@
+{
+  "game_settings": {
+    "sound": {
+      "backsound": true,
+      "sound_fx": true
+    }
+  },
+  "stage_open": 1
+}

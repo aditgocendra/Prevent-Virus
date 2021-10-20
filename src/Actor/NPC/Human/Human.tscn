@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actor/NPC/Human/Man.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actor/NPC/Human/Human.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 58.6898, 163.098 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 58.1896, 6.98041 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 58.2879, 6.03745 )
+
+[node name="AreaHuman" type="Area2D"]
+scale = Vector2( 0.15, 0.15 )
+z_index = -1
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "WalkSide"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AreaTop" type="Area2D" parent="."]
+position = Vector2( 0, -175.937 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTop"]
+shape = SubResource( 2 )
+
+[node name="AreaBottom" type="Area2D" parent="."]
+position = Vector2( 0, 173.93 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBottom"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_AreaHuman_body_entered"]
+[connection signal="body_entered" from="AreaTop" to="." method="_on_AreaTop_body_entered"]
+[connection signal="body_entered" from="AreaBottom" to="." method="_on_AreaBottom_body_entered"]

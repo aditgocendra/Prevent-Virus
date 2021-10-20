@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Actor/NPC/Cars/car_yellow.png" type="Texture" id=1]
+[ext_resource path="res://src/Actor/NPC/Car/Car.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.3721, 64.1965 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 35.3452, 65.9803 )
+
+[node name="Car" type="Sprite"]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="AreaHit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaHit"]
+modulate = Color( 0.396078, 0.0627451, 0.372549, 1 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="AreaHit" to="." method="_on_AreaHit_body_entered"]

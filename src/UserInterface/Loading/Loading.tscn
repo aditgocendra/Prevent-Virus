@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Loading/Loading1.png" type="Texture" id=1]
+[ext_resource path="res://assets/Font/OneDirection.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/UserInterface/Loading/Loading.gd" type="Script" id=3]
+[ext_resource path="res://src/UserInterface/Transition/Fader.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+extra_spacing_char = 3
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Loading"
+length = 1.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fader/ImageLoading/BackgroundTip/Loading:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Loading", "Loading.", "Loading..", "Loading..." ]
+}
+
+[node name="LoadingInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fader" parent="." instance=ExtResource( 4 )]
+
+[node name="ImageLoading" type="TextureRect" parent="Fader"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="BackgroundTip" type="Panel" parent="Fader/ImageLoading"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -562.0
+margin_top = -70.0
+margin_right = 562.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip" type="Label" parent="Fader/ImageLoading/BackgroundTip"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.0
+margin_top = -21.0
+margin_right = 210.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 1 )
+text = "Lindungi diri dari virus yang sedang berkecamuk diluar sana dengan menggunakan masker sebagai pencegahan"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="Label" parent="Fader/ImageLoading/BackgroundTip"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -269.293
+margin_top = -28.6787
+margin_right = -179.292
+margin_bottom = -10.6787
+custom_fonts/font = SubResource( 2 )
+text = "Loading..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Loading"
+anims/Loading = SubResource( 3 )
+
+[node name="TimerLoad" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="TimerLoad" to="." method="_on_TimerLoad_timeout"]

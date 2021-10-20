@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Background/Background-Menu.png" type="Texture" id=1]
 [ext_resource path="res://assets/Background/Box-Background.png" type="Texture" id=2]
 [ext_resource path="res://assets/Decoration/Stage-Decor.png" type="Texture" id=3]
 [ext_resource path="res://assets/Font/Blomster.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Button/BakMainMenu.png" type="Texture" id=5]
 [ext_resource path="res://assets/Decoration/LockStage.png" type="Texture" id=6]
 [ext_resource path="res://src/UserInterface/Transition/Fader.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/UserInterface/Stage/Stage.gd" type="Script" id=8]
@@ -22,8 +23,10 @@ __meta__ = {
 }
 
 [node name="Fader" parent="." instance=ExtResource( 7 )]
+color = Color( 0, 0, 0, 0 )
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="Fader"]
+show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
@@ -32,7 +35,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxBackground" type="TextureRect" parent="Background"]
+[node name="BoxBackground" type="TextureRect" parent="Fader/Background"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -47,7 +50,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Header" type="TextureRect" parent="Background/BoxBackground"]
+[node name="Header" type="TextureRect" parent="Fader/Background/BoxBackground"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -92.0
@@ -59,7 +62,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CotainerStage" type="HBoxContainer" parent="Background/BoxBackground"]
+[node name="CotainerStage" type="HBoxContainer" parent="Fader/Background/BoxBackground"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -72,12 +75,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StageBG1" type="TextureRect" parent="Background/BoxBackground/CotainerStage"]
+[node name="StageBG1" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage"]
 margin_right = 73.0
 margin_bottom = 74.0
 texture = ExtResource( 9 )
 
-[node name="1" type="Label" parent="Background/BoxBackground/CotainerStage/StageBG1"]
+[node name="1" type="Label" parent="Fader/Background/BoxBackground/CotainerStage/StageBG1"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -93,7 +96,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LockStage" type="TextureRect" parent="Background/BoxBackground/CotainerStage/StageBG1"]
+[node name="LockStage" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage/StageBG1"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -105,13 +108,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StageBG2" type="TextureRect" parent="Background/BoxBackground/CotainerStage"]
+[node name="StageBG2" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage"]
 margin_left = 77.0
 margin_right = 150.0
 margin_bottom = 74.0
 texture = ExtResource( 9 )
 
-[node name="2" type="Label" parent="Background/BoxBackground/CotainerStage/StageBG2"]
+[node name="2" type="Label" parent="Fader/Background/BoxBackground/CotainerStage/StageBG2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -127,7 +130,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LockStage" type="TextureRect" parent="Background/BoxBackground/CotainerStage/StageBG2"]
+[node name="LockStage" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage/StageBG2"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -139,13 +142,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StageBG3" type="TextureRect" parent="Background/BoxBackground/CotainerStage"]
+[node name="StageBG3" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage"]
 margin_left = 154.0
 margin_right = 227.0
 margin_bottom = 74.0
 texture = ExtResource( 9 )
 
-[node name="3" type="Label" parent="Background/BoxBackground/CotainerStage/StageBG3"]
+[node name="3" type="Label" parent="Fader/Background/BoxBackground/CotainerStage/StageBG3"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -161,7 +164,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LockStage" type="TextureRect" parent="Background/BoxBackground/CotainerStage/StageBG3"]
+[node name="LockStage" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage/StageBG3"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -173,13 +176,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StageBG4" type="TextureRect" parent="Background/BoxBackground/CotainerStage"]
+[node name="StageBG4" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage"]
 margin_left = 231.0
 margin_right = 304.0
 margin_bottom = 74.0
 texture = ExtResource( 9 )
 
-[node name="4" type="Label" parent="Background/BoxBackground/CotainerStage/StageBG4"]
+[node name="4" type="Label" parent="Fader/Background/BoxBackground/CotainerStage/StageBG4"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -195,7 +198,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LockStage" type="TextureRect" parent="Background/BoxBackground/CotainerStage/StageBG4"]
+[node name="LockStage" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage/StageBG4"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -207,13 +210,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StageBG5" type="TextureRect" parent="Background/BoxBackground/CotainerStage"]
+[node name="StageBG5" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage"]
 margin_left = 308.0
 margin_right = 381.0
 margin_bottom = 74.0
 texture = ExtResource( 9 )
 
-[node name="5" type="Label" parent="Background/BoxBackground/CotainerStage/StageBG5"]
+[node name="5" type="Label" parent="Fader/Background/BoxBackground/CotainerStage/StageBG5"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -229,7 +232,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LockStage" type="TextureRect" parent="Background/BoxBackground/CotainerStage/StageBG5"]
+[node name="LockStage" type="TextureRect" parent="Fader/Background/BoxBackground/CotainerStage/StageBG5"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -241,8 +244,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="gui_input" from="Background/BoxBackground/CotainerStage/StageBG1" to="." method="_on_StageBG1_gui_input"]
-[connection signal="gui_input" from="Background/BoxBackground/CotainerStage/StageBG2" to="." method="_on_StageBG2_gui_input"]
-[connection signal="gui_input" from="Background/BoxBackground/CotainerStage/StageBG3" to="." method="_on_StageBG3_gui_input"]
-[connection signal="gui_input" from="Background/BoxBackground/CotainerStage/StageBG4" to="." method="_on_StageBG4_gui_input"]
-[connection signal="gui_input" from="Background/BoxBackground/CotainerStage/StageBG5" to="." method="_on_StageBG5_gui_input"]
+[node name="BAckMainMenu" type="TextureButton" parent="Fader/Background/BoxBackground"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -68.5355
+margin_top = -26.2204
+margin_right = 31.4645
+margin_bottom = 74.7796
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="Fader/Background/BoxBackground/CotainerStage/StageBG1" to="." method="_on_StageBG1_gui_input"]
+[connection signal="gui_input" from="Fader/Background/BoxBackground/CotainerStage/StageBG2" to="." method="_on_StageBG2_gui_input"]
+[connection signal="gui_input" from="Fader/Background/BoxBackground/CotainerStage/StageBG3" to="." method="_on_StageBG3_gui_input"]
+[connection signal="gui_input" from="Fader/Background/BoxBackground/CotainerStage/StageBG4" to="." method="_on_StageBG4_gui_input"]
+[connection signal="gui_input" from="Fader/Background/BoxBackground/CotainerStage/StageBG5" to="." method="_on_StageBG5_gui_input"]
+[connection signal="pressed" from="Fader/Background/BoxBackground/BAckMainMenu" to="." method="_on_BAckMainMenu_pressed"]
