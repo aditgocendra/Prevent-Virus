@@ -31,6 +31,7 @@ __meta__ = {
 }
 
 [node name="Fader" parent="." instance=ExtResource( 1 )]
+color = Color( 0, 0, 0, 0 )
 
 [node name="Background" type="TextureRect" parent="Fader"]
 show_behind_parent = true

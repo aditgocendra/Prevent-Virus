@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0001.png" type="Texture" id=1]
 [ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0004.png" type="Texture" id=2]
@@ -116,10 +116,7 @@
 [ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0003.png" type="Texture" id=114]
 [ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0013.png" type="Texture" id=115]
 [ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0020.png" type="Texture" id=116]
-[ext_resource path="res://assets/Button/Right.png" type="Texture" id=117]
-[ext_resource path="res://assets/Button/Top.png" type="Texture" id=118]
-[ext_resource path="res://assets/Button/Bottom.png" type="Texture" id=119]
-[ext_resource path="res://assets/Button/Left.png" type="Texture" id=120]
+[ext_resource path="res://src/Actor/Player/Joystick.tscn" type="PackedScene" id=117]
 [ext_resource path="res://assets/Button/Grab-Button.png" type="Texture" id=121]
 [ext_resource path="res://assets/Button/64x64d_button--B--16.png" type="Texture" id=122]
 [ext_resource path="res://assets/Background/FrameWin.png" type="Texture" id=123]
@@ -146,12 +143,8 @@
 [ext_resource path="res://assets/Actor/Player/Spray/depan0004.png" type="Texture" id=144]
 [ext_resource path="res://assets/Actor/Player/Spray/kanan0003.png" type="Texture" id=145]
 [ext_resource path="res://assets/Actor/Player/Spray/kanan0001.png" type="Texture" id=146]
-[ext_resource path="res://assets/Button/ActiveRight.png" type="Texture" id=147]
 [ext_resource path="res://assets/Button/ActiveBtnSpray.png" type="Texture" id=148]
-[ext_resource path="res://assets/Button/ActiveBottom.png" type="Texture" id=149]
 [ext_resource path="res://assets/Button/ActiveBtnGrab.png" type="Texture" id=150]
-[ext_resource path="res://assets/Button/ActiveTop.png" type="Texture" id=151]
-[ext_resource path="res://assets/Button/ActiveLeft.png" type="Texture" id=152]
 [ext_resource path="res://assets/Sound/SFX/Footstep_Tile_Right_2.wav" type="AudioStream" id=153]
 [ext_resource path="res://assets/Button/HomeBtn.png" type="Texture" id=154]
 
@@ -167,30 +160,10 @@ animations = [ {
 "name": "Back",
 "speed": 11.0
 }, {
-"frames": [ ExtResource( 77 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 78 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 88 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 66 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 80 ), ExtResource( 71 ) ],
-"loop": true,
-"name": "IdleMask",
-"speed": 17.0
-}, {
-"frames": [ ExtResource( 140 ), ExtResource( 135 ), ExtResource( 138 ), ExtResource( 133 ), ExtResource( 131 ), ExtResource( 137 ) ],
-"loop": true,
-"name": "SprayBack",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 86 ), ExtResource( 67 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 98 ), ExtResource( 105 ), ExtResource( 97 ), ExtResource( 104 ) ],
 "loop": true,
 "name": "FrontMask",
 "speed": 11.0
-}, {
-"frames": [ ExtResource( 102 ), ExtResource( 108 ), ExtResource( 114 ), ExtResource( 111 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 109 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 115 ), ExtResource( 101 ), ExtResource( 96 ), ExtResource( 94 ), ExtResource( 89 ), ExtResource( 92 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 110 ), ExtResource( 113 ), ExtResource( 95 ), ExtResource( 103 ) ],
-"loop": true,
-"name": "SideMask",
-"speed": 24.0
-}, {
-"frames": [ ExtResource( 142 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 144 ), ExtResource( 136 ), ExtResource( 130 ) ],
-"loop": true,
-"name": "SprayFront",
-"speed": 6.0
 }, {
 "frames": [ ExtResource( 146 ), ExtResource( 141 ), ExtResource( 145 ), ExtResource( 134 ), ExtResource( 143 ), ExtResource( 139 ) ],
 "loop": true,
@@ -202,9 +175,29 @@ animations = [ {
 "name": "Front",
 "speed": 11.0
 }, {
+"frames": [ ExtResource( 142 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 144 ), ExtResource( 136 ), ExtResource( 130 ) ],
+"loop": true,
+"name": "SprayFront",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 140 ), ExtResource( 135 ), ExtResource( 138 ), ExtResource( 133 ), ExtResource( 131 ), ExtResource( 137 ) ],
+"loop": true,
+"name": "SprayBack",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 108 ), ExtResource( 114 ), ExtResource( 111 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 109 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 115 ), ExtResource( 101 ), ExtResource( 96 ), ExtResource( 94 ), ExtResource( 89 ), ExtResource( 92 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 110 ), ExtResource( 113 ), ExtResource( 95 ), ExtResource( 103 ) ],
+"loop": true,
+"name": "SideMask",
+"speed": 24.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 17.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 78 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 88 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 66 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 80 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "IdleMask",
 "speed": 17.0
 } ]
 
@@ -268,38 +261,8 @@ shape = SubResource( 3 )
 
 [node name="ControlInterface" type="CanvasLayer" parent="."]
 
-[node name="NavButton" type="Control" parent="ControlInterface"]
-margin_left = 29.0
-margin_top = 270.135
-margin_right = 221.0
-margin_bottom = 448.135
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Top" type="TouchScreenButton" parent="ControlInterface/NavButton"]
-position = Vector2( 64, 0 )
-normal = ExtResource( 118 )
-pressed = ExtResource( 151 )
-action = "move_top"
-
-[node name="Bottom" type="TouchScreenButton" parent="ControlInterface/NavButton"]
-position = Vector2( 64, 114 )
-normal = ExtResource( 119 )
-pressed = ExtResource( 149 )
-action = "move_bottom"
-
-[node name="Right" type="TouchScreenButton" parent="ControlInterface/NavButton"]
-position = Vector2( 128, 57 )
-normal = ExtResource( 117 )
-pressed = ExtResource( 147 )
-action = "move_right"
-
-[node name="Left" type="TouchScreenButton" parent="ControlInterface/NavButton"]
-position = Vector2( 0, 57 )
-normal = ExtResource( 120 )
-pressed = ExtResource( 152 )
-action = "move_left"
+[node name="Joystick" parent="ControlInterface" instance=ExtResource( 117 )]
+position = Vector2( 117.468, 361.927 )
 
 [node name="Grab" type="TouchScreenButton" parent="ControlInterface"]
 visible = false

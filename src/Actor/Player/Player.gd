@@ -11,6 +11,7 @@ onready var pause_overlay = $ControlInterface/PauseOverlay
 onready var spray_button = $ControlInterface/RightContainer
 onready var area_spray = $AreaSpray
 onready var area_col_spray = $AreaSpray/CollisionPolygon2D
+onready var joystick = $ControlInterface/Joystick/Joy
 
 var sfx_data
 
@@ -47,7 +48,9 @@ func _physics_process(delta):
 		
 		if Input.is_action_pressed("move_bottom"):
 			direction.y += 1
-	
+		
+		direction = joystick.get_4_direction()
+		
 	
 	# Area spray rotation
 	if $TimerSpray.is_stopped():

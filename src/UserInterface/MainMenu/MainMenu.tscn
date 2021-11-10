@@ -52,6 +52,7 @@ __meta__ = {
 }
 
 [node name="Header" type="TextureRect" parent="Fader/Background"]
+modulate = Color( 0.67451, 0.247059, 0.247059, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -258.5
