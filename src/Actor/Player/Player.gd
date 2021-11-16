@@ -15,6 +15,8 @@ onready var joystick = $ControlInterface/Joystick/Joy
 
 var sfx_data
 
+# direction before to zero
+var direction_idle_pos : Vector2
 
 func _ready():
 	var data = Database.loadData()
@@ -51,14 +53,14 @@ func _physics_process(delta):
 		
 		direction = joystick.get_4_direction()
 		
-	
+		
 	# Area spray rotation
 	if $TimerSpray.is_stopped():
-		if direction.x > 0:
+		if direction_idle_pos.x > 0:
 			area_spray.rotation_degrees = -90
-		elif direction.x < 0:
+		elif direction_idle_pos.x < 0:
 			area_spray.rotation_degrees = 90
-		elif direction.y > 0 or direction.y == 0:
+		elif direction_idle_pos.y > 0 or direction_idle_pos.y == 0:
 			area_spray.rotation_degrees = 0
 		else: area_spray.rotation_degrees = 180
 	
@@ -95,7 +97,8 @@ func _physics_process(delta):
 		
 	
 func control_animation(direct, spray):
-	var anim
+	var anim = "Idle"
+	
 	if direct.x > 0 or direct.x < 0:
 		if spray:
 			anim = "SpraySide"
@@ -122,14 +125,36 @@ func control_animation(direct, spray):
 		else:
 			anim = "Back"
 	
+	# get direct before realese direction to zero
+	if direct.x != 0 or direct.y != 0:
+		direction_idle_pos = direct
+		
+	
 	if direct.x == 0 and direct.y == 0:
 		if spray:
-			anim = "SprayFront"
+			if direction_idle_pos.x > 0 or direction_idle_pos.x < 0 :
+				anim = "SpraySide"
+			elif direction_idle_pos.y < 0:
+				anim = "SprayBack"
+			elif direction_idle_pos.y > 0:
+				anim = "SprayFront"
 		else:
 			if Utility.current_stage > 2 or Utility.mask_pickup > 0:
-				anim = "IdleMask"
-			else: anim = "Idle"
-	
+				
+				if direction_idle_pos.x > 0 or direction_idle_pos.x < 0 :
+					anim = "SideIdleMask"
+				elif direction_idle_pos.y < 0:
+					anim = "IdleBack"
+				elif direction_idle_pos.y > 0:
+					anim = "IdleMask"
+			else: 
+				if direction_idle_pos.x > 0 or direction_idle_pos.x < 0:
+					anim = "SideIdle"
+				elif direction_idle_pos.y < 0:
+					anim = "IdleBack"
+				elif direction_idle_pos.y > 0: 
+					anim = "Idle"
+				
 	return anim
 
 func grab_btn():

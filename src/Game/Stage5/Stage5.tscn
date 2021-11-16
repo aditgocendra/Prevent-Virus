@@ -159,7 +159,7 @@ limit_screen_right = 1858
 limit_screen_bottom = 1473
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1211.74, 152.014 )
+position = Vector2( 1209.92, 158.328 )
 z_index = 2
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -240,6 +240,7 @@ texture = ExtResource( 4 )
 [node name="Hospital" type="Sprite" parent="ObstacleGroup/Place2"]
 position = Vector2( 87.4532, -108.737 )
 scale = Vector2( 0.8, 0.8 )
+z_index = 3
 texture = ExtResource( 28 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place2/Hospital"]
