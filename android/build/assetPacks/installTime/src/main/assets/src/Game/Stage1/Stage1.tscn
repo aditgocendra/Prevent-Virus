@@ -1,0 +1,520 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://src/Actor/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Obstacle/WallHorizontal.png" type="Texture" id=2]
+[ext_resource path="res://assets/Obstacle/Television.png" type="Texture" id=3]
+[ext_resource path="res://assets/Obstacle/Sofa-Vertical.png" type="Texture" id=4]
+[ext_resource path="res://assets/Obstacle/Sofa-Horizontal.png" type="Texture" id=5]
+[ext_resource path="res://assets/Obstacle/Carpet.png" type="Texture" id=6]
+[ext_resource path="res://assets/Obstacle/Plant.png" type="Texture" id=7]
+[ext_resource path="res://assets/Obstacle/Icebox.png" type="Texture" id=8]
+[ext_resource path="res://assets/Obstacle/Stove.png" type="Texture" id=9]
+[ext_resource path="res://assets/Obstacle/Cupboard.png" type="Texture" id=10]
+[ext_resource path="res://assets/Obstacle/Bed.png" type="Texture" id=11]
+[ext_resource path="res://assets/Obstacle/Door.png" type="Texture" id=12]
+[ext_resource path="res://assets/Obstacle/Carpet-2.png" type="Texture" id=13]
+[ext_resource path="res://assets/Obstacle/DrawerBox.png" type="Texture" id=14]
+[ext_resource path="res://assets/Obstacle/WallVertical.png" type="Texture" id=15]
+[ext_resource path="res://assets/Obstacle/EatTable.png" type="Texture" id=16]
+[ext_resource path="res://assets/Obstacle/Wall-Inside.png" type="Texture" id=17]
+[ext_resource path="res://assets/Decoration/WoodFrame.png" type="Texture" id=18]
+[ext_resource path="res://assets/Obstacle/Mask.png" type="Texture" id=19]
+[ext_resource path="res://src/UserInterface/Frame/EndStageFrame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Font/Blomster.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://src/Game/Stage1/Stage1.gd" type="Script" id=22]
+[ext_resource path="res://src/Object/Mask/Mask.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/UserInterface/Frame/IntroStage.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/Obstacle/Wood-Floor.png" type="Texture" id=26]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 88, 0, 88 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 5, 0, 5, 88, 0, 88 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "WallHorizontal.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 88 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "WallVertical.png 1"
+1/texture = ExtResource( 15 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 88 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=4]
+0/name = "Wood-Floor.png 0"
+0/texture = ExtResource( 26 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 88 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 77.8631, 72.4269 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 35.9534, 85.7646 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 93.0525, 33.1219 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 46.6686, 75.6682 )
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 24.5619
+height = 82.5964
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 30.6683, 46.0563 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 107.568, 63.7883 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 66.1959, 59.6757 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 135.95, 93.8077 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 20.2367, 43.9926 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 32
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 32
+font_data = ExtResource( 21 )
+
+[node name="Stage1" type="Node2D"]
+script = ExtResource( 22 )
+limit_screen_right = 1024
+limit_screen_bottom = 620
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 454.521, 267.357 )
+z_index = 1
+
+[node name="Wall" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 128, 88 )
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 131071, 1610612737, 0, 65536, 1, 0, 65540, 1610612737, 0, 65541, 1, 0, 65543, 1610612737, 0, 196607, 1610612737, 0, 131072, 1, 0, 131079, 1610612737, 0, 262143, 1610612737, 0, 196608, 1, 0, 196612, 1610612737, 0, 196613, 1, 0, 196615, 1610612737, 0, 327679, 1610612737, 0, 262144, 0, 0, 262146, 0, 0, 262148, 0, 0, 262149, 1, 0, 262151, 1610612737, 0, 393215, 1610612737, 0, 327680, 1, 0, 327681, 1610612737, 0, 327682, 1, 0, 327684, 1610612737, 0, 327685, 1, 0, 327687, 1610612737, 0, 458751, 1610612737, 0, 393216, 1, 0, 393217, 1610612737, 0, 393218, 1, 0, 393220, 1610612737, 0, 393221, 1, 0, 393223, 1610612737, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0 )
+
+[node name="Floor" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 4 )
+cell_size = Vector2( 128, 88 )
+format = 1
+tile_data = PoolIntArray( 131071, 1610612736, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 196607, 1610612736, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 262143, 1610612736, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 327679, 1610612736, 0, 262145, 0, 0, 262147, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 393215, 1610612736, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 458751, 1610612736, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0 )
+
+[node name="ObstacleGroup" type="Node2D" parent="."]
+
+[node name="Television" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 158.427, 76.3676 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Television"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Television/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="Sofa-Vertical" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 261.719, 178.382 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Sofa-Vertical"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Sofa-Vertical/StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 6 )
+
+[node name="Sofa-Vertical2" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 59.3455, 178.382 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Sofa-Vertical2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Sofa-Vertical2/StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 6 )
+
+[node name="Sofa-Vertical3" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 589.383, 519.551 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Sofa-Vertical3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Sofa-Vertical3/StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 6 )
+
+[node name="Sofa-Vertical4" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 307.374, 519.551 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Sofa-Vertical4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Sofa-Vertical4/StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 6 )
+
+[node name="Sofa-Horizontal" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 159.867, 265.115 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Sofa-Horizontal"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Sofa-Horizontal/StaticBody2D"]
+position = Vector2( -3.43787, 7.93701 )
+shape = SubResource( 7 )
+
+[node name="Carpet" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 448.235, 229.442 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="Stove" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 957.134, 125.294 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Stove"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Stove/StaticBody2D"]
+polygon = PoolVector2Array( -148.748, -10.197, -150.638, -104.691, 130.954, -105.321, 132.844, 88.0768, 132.844, 88.0768, 66.6985, 88.7068, 65.4386, -8.93707 )
+
+[node name="Icebox" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 721.578, 81.5014 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Icebox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Icebox/StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="Plant" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 605.881, 86.7663 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Plant"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Plant/StaticBody2D"]
+shape = SubResource( 9 )
+
+[node name="Plant2" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 235.06, 427.162 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 3
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Plant2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Plant2/StaticBody2D"]
+shape = SubResource( 9 )
+
+[node name="Plant3" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 612.623, 427.162 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Plant3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Plant3/StaticBody2D"]
+shape = SubResource( 9 )
+
+[node name="Cupboard" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 50.7239, 412.105 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Cupboard"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Cupboard/StaticBody2D"]
+position = Vector2( -7.14331, 0 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 10 )
+
+[node name="Bed" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 70.3865, 562.148 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Bed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Bed/StaticBody2D"]
+position = Vector2( -9.73901, 11.9865 )
+shape = SubResource( 11 )
+
+[node name="Door" type="Sprite" parent="ObstacleGroup"]
+visible = false
+position = Vector2( 189.72, 404.85 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Carpet-2" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 444.431, 598.295 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="DrawerBox" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 320.509, 433.465 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/DrawerBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/DrawerBox/StaticBody2D"]
+position = Vector2( -6.36395, 0 )
+shape = SubResource( 12 )
+
+[node name="EatTable" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 834.814, 458.166 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/EatTable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/EatTable/StaticBody2D"]
+position = Vector2( 0, -6.00677 )
+shape = SubResource( 13 )
+
+[node name="Wall-Inside" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 448, 396 )
+z_index = 2
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Wall-Inside"]
+position = Vector2( -44.6407, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Wall-Inside/StaticBody2D"]
+shape = SubResource( 14 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="ObstacleGroup/Wall-Inside"]
+position = Vector2( 43.7595, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Wall-Inside/StaticBody2D2"]
+shape = SubResource( 14 )
+
+[node name="Wall-Inside2" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 192, 396 )
+z_index = 2
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Wall-Inside2"]
+position = Vector2( -44.6407, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Wall-Inside2/StaticBody2D"]
+shape = SubResource( 14 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="ObstacleGroup/Wall-Inside2"]
+position = Vector2( 43.7595, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Wall-Inside2/StaticBody2D2"]
+shape = SubResource( 14 )
+
+[node name="Objective" type="Node2D" parent="."]
+
+[node name="Mask" parent="Objective" instance=ExtResource( 23 )]
+position = Vector2( 893.101, 90.4526 )
+
+[node name="Mask2" parent="Objective" instance=ExtResource( 23 )]
+position = Vector2( 610.436, 581.922 )
+
+[node name="Mask3" parent="Objective" instance=ExtResource( 23 )]
+position = Vector2( 82.4816, 545.254 )
+
+[node name="InterfeLayer" type="CanvasLayer" parent="."]
+
+[node name="WoodFrameMask" type="TextureRect" parent="InterfeLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HContainer" type="HBoxContainer" parent="InterfeLayer/WoodFrameMask"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -43.5
+margin_top = -20.0
+margin_right = 43.5
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mask" type="TextureRect" parent="InterfeLayer/WoodFrameMask/HContainer"]
+margin_right = 44.0
+margin_bottom = 40.0
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="InterfeLayer/WoodFrameMask/HContainer"]
+margin_left = 48.0
+margin_top = 2.0
+margin_right = 69.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 15 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="InterfeLayer/WoodFrameMask/HContainer"]
+margin_left = 73.0
+margin_top = 2.0
+margin_right = 89.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 16 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WoodFrameTimer" type="TextureRect" parent="InterfeLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -150.0
+margin_bottom = 60.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HContainer" type="HBoxContainer" parent="InterfeLayer/WoodFrameTimer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -21.6622
+margin_right = 33.0
+margin_bottom = 13.3378
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minute" type="Label" parent="InterfeLayer/WoodFrameTimer/HContainer"]
+margin_right = 16.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 15 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="InterfeLayer/WoodFrameTimer/HContainer"]
+margin_left = 20.0
+margin_right = 26.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 15 )
+text = ":"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Second" type="Label" parent="InterfeLayer/WoodFrameTimer/HContainer"]
+margin_left = 30.0
+margin_right = 66.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 16 )
+text = "45"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndStageFrame" parent="InterfeLayer" instance=ExtResource( 20 )]
+pause_mode = 2
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -206.0
+margin_top = -148.5
+margin_right = 206.0
+margin_bottom = 148.5
+
+[node name="IntroStage" parent="InterfeLayer" instance=ExtResource( 24 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -141.5
+margin_right = 202.0
+margin_bottom = 141.5
+
+[node name="CountdownStage" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="CountdownStage" to="." method="_on_CountdownStage_timeout"]

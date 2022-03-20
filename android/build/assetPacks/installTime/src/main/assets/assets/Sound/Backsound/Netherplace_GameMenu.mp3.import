@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Netherplace_GameMenu.mp3-31ac3dd154e78c3b490a3f6838cd479a.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound/Backsound/Netherplace_GameMenu.mp3"
+dest_files=[ "res://.import/Netherplace_GameMenu.mp3-31ac3dd154e78c3b490a3f6838cd479a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

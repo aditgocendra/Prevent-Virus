@@ -1,0 +1,487 @@
+[gd_scene load_steps=225 format=2]
+
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0001.png" type="Texture" id=1]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0004.png" type="Texture" id=2]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0007.png" type="Texture" id=3]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0009.png" type="Texture" id=4]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0010.png" type="Texture" id=5]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0008.png" type="Texture" id=6]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0011.png" type="Texture" id=7]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0003.png" type="Texture" id=8]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0002.png" type="Texture" id=9]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0005.png" type="Texture" id=10]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0006.png" type="Texture" id=11]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0012.png" type="Texture" id=12]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0015.png" type="Texture" id=13]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0013.png" type="Texture" id=14]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0017.png" type="Texture" id=15]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0014.png" type="Texture" id=16]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle tanpa masker0016.png" type="Texture" id=17]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0004.png" type="Texture" id=18]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0009.png" type="Texture" id=19]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0002.png" type="Texture" id=20]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0007.png" type="Texture" id=21]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0005.png" type="Texture" id=22]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0001.png" type="Texture" id=23]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0003.png" type="Texture" id=24]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0008.png" type="Texture" id=25]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0006.png" type="Texture" id=26]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0011.png" type="Texture" id=27]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk back0010.png" type="Texture" id=28]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0005.png" type="Texture" id=29]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0009.png" type="Texture" id=30]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0012.png" type="Texture" id=31]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0004.png" type="Texture" id=32]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0015.png" type="Texture" id=33]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0016.png" type="Texture" id=34]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0011.png" type="Texture" id=35]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0003.png" type="Texture" id=36]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0008.png" type="Texture" id=37]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0006.png" type="Texture" id=38]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0001.png" type="Texture" id=39]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0008.png" type="Texture" id=40]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0002.png" type="Texture" id=41]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0011.png" type="Texture" id=42]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0017.png" type="Texture" id=43]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0018.png" type="Texture" id=44]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0019.png" type="Texture" id=45]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0020.png" type="Texture" id=46]
+[ext_resource path="res://src/Actor/Player/Player.gd" type="Script" id=47]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0021.png" type="Texture" id=48]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0022.png" type="Texture" id=49]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0004.png" type="Texture" id=50]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0006.png" type="Texture" id=51]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0002.png" type="Texture" id=52]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0009.png" type="Texture" id=53]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0024.png" type="Texture" id=54]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0007.png" type="Texture" id=55]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0023.png" type="Texture" id=56]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0003.png" type="Texture" id=57]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0010.png" type="Texture" id=58]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0007.png" type="Texture" id=59]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0010.png" type="Texture" id=60]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0014.png" type="Texture" id=61]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0005.png" type="Texture" id=62]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk side0013.png" type="Texture" id=63]
+[ext_resource path="res://assets/Actor/Player/NoMask/walk front0001.png" type="Texture" id=64]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0009.png" type="Texture" id=65]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0013.png" type="Texture" id=66]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0002.png" type="Texture" id=67]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0008.png" type="Texture" id=68]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0007.png" type="Texture" id=69]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0015.png" type="Texture" id=70]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0017.png" type="Texture" id=71]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0003.png" type="Texture" id=72]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0004.png" type="Texture" id=73]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0005.png" type="Texture" id=74]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0002.png" type="Texture" id=75]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0011.png" type="Texture" id=76]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0001.png" type="Texture" id=77]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0004.png" type="Texture" id=78]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0003.png" type="Texture" id=79]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0016.png" type="Texture" id=80]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0006.png" type="Texture" id=81]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0007.png" type="Texture" id=82]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0006.png" type="Texture" id=83]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0012.png" type="Texture" id=84]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0014.png" type="Texture" id=85]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0001.png" type="Texture" id=86]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0005.png" type="Texture" id=87]
+[ext_resource path="res://assets/Actor/Player/WithMask/idle0010.png" type="Texture" id=88]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0017.png" type="Texture" id=89]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0010.png" type="Texture" id=90]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0009.png" type="Texture" id=91]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0018.png" type="Texture" id=92]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0005.png" type="Texture" id=93]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0016.png" type="Texture" id=94]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0023.png" type="Texture" id=95]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0015.png" type="Texture" id=96]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0010.png" type="Texture" id=97]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0008.png" type="Texture" id=98]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0006.png" type="Texture" id=99]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0011.png" type="Texture" id=100]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0014.png" type="Texture" id=101]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0001.png" type="Texture" id=102]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0024.png" type="Texture" id=103]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0011.png" type="Texture" id=104]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk front masker0009.png" type="Texture" id=105]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0008.png" type="Texture" id=106]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0012.png" type="Texture" id=107]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0002.png" type="Texture" id=108]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0007.png" type="Texture" id=109]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0021.png" type="Texture" id=110]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0004.png" type="Texture" id=111]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0019.png" type="Texture" id=112]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0022.png" type="Texture" id=113]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0003.png" type="Texture" id=114]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0013.png" type="Texture" id=115]
+[ext_resource path="res://assets/Actor/Player/WithMask/walk side masker0020.png" type="Texture" id=116]
+[ext_resource path="res://src/Actor/Player/Joystick.tscn" type="PackedScene" id=117]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010015.png" type="Texture" id=118]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010016.png" type="Texture" id=119]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010017.png" type="Texture" id=120]
+[ext_resource path="res://assets/Button/Grab-Button.png" type="Texture" id=121]
+[ext_resource path="res://assets/Button/64x64d_button--B--16.png" type="Texture" id=122]
+[ext_resource path="res://assets/Background/FrameWin.png" type="Texture" id=123]
+[ext_resource path="res://assets/Font/Blomster.ttf" type="DynamicFontData" id=124]
+[ext_resource path="res://assets/Button/RetryButton.png" type="Texture" id=125]
+[ext_resource path="res://assets/Button/StageBtn.png" type="Texture" id=126]
+[ext_resource path="res://assets/Button/Next.png" type="Texture" id=127]
+[ext_resource path="res://assets/Button/Spray-Button.png" type="Texture" id=128]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0002.png" type="Texture" id=129]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0006.png" type="Texture" id=130]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0005.png" type="Texture" id=131]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0003.png" type="Texture" id=132]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0004.png" type="Texture" id=133]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0004.png" type="Texture" id=134]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0002.png" type="Texture" id=135]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0005.png" type="Texture" id=136]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0006.png" type="Texture" id=137]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0003.png" type="Texture" id=138]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0006.png" type="Texture" id=139]
+[ext_resource path="res://assets/Actor/Player/Spray/belakang0001.png" type="Texture" id=140]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0002.png" type="Texture" id=141]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0001.png" type="Texture" id=142]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0005.png" type="Texture" id=143]
+[ext_resource path="res://assets/Actor/Player/Spray/depan0004.png" type="Texture" id=144]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0003.png" type="Texture" id=145]
+[ext_resource path="res://assets/Actor/Player/Spray/kanan0001.png" type="Texture" id=146]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010014.png" type="Texture" id=147]
+[ext_resource path="res://assets/Button/ActiveBtnSpray.png" type="Texture" id=148]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010018.png" type="Texture" id=149]
+[ext_resource path="res://assets/Button/ActiveBtnGrab.png" type="Texture" id=150]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010009.png" type="Texture" id=151]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010010.png" type="Texture" id=152]
+[ext_resource path="res://assets/Sound/SFX/Footstep_Tile_Right_2.wav" type="AudioStream" id=153]
+[ext_resource path="res://assets/Button/HomeBtn.png" type="Texture" id=154]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010012.png" type="Texture" id=155]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010008.png" type="Texture" id=156]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010011.png" type="Texture" id=157]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010013.png" type="Texture" id=158]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010001.png" type="Texture" id=159]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010002.png" type="Texture" id=160]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010003.png" type="Texture" id=161]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010004.png" type="Texture" id=162]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010005.png" type="Texture" id=163]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010006.png" type="Texture" id=164]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010007.png" type="Texture" id=165]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010023.png" type="Texture" id=166]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010019.png" type="Texture" id=167]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010022.png" type="Texture" id=168]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010021.png" type="Texture" id=169]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010024.png" type="Texture" id=170]
+[ext_resource path="res://assets/Actor/Player/NoMask/side idle tanpa masker00010020.png" type="Texture" id=171]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0021.png" type="Texture" id=172]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0019.png" type="Texture" id=173]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0020.png" type="Texture" id=174]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0022.png" type="Texture" id=175]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0023.png" type="Texture" id=176]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0024.png" type="Texture" id=177]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0009.png" type="Texture" id=178]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0003.png" type="Texture" id=179]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0008.png" type="Texture" id=180]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0015.png" type="Texture" id=181]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0005.png" type="Texture" id=182]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0007.png" type="Texture" id=183]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0004.png" type="Texture" id=184]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0010.png" type="Texture" id=185]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0014.png" type="Texture" id=186]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0017.png" type="Texture" id=187]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0001.png" type="Texture" id=188]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0006.png" type="Texture" id=189]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0011.png" type="Texture" id=190]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0002.png" type="Texture" id=191]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0012.png" type="Texture" id=192]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0016.png" type="Texture" id=193]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0018.png" type="Texture" id=194]
+[ext_resource path="res://assets/Actor/Player/WithMask/side idle samping masker0013.png" type="Texture" id=195]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0002.png" type="Texture" id=196]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0003.png" type="Texture" id=197]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0004.png" type="Texture" id=198]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0005.png" type="Texture" id=199]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0001.png" type="Texture" id=200]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0017.png" type="Texture" id=201]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0024.png" type="Texture" id=202]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0019.png" type="Texture" id=203]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0012.png" type="Texture" id=204]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0010.png" type="Texture" id=205]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0018.png" type="Texture" id=206]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0020.png" type="Texture" id=207]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0022.png" type="Texture" id=208]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0011.png" type="Texture" id=209]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0016.png" type="Texture" id=210]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0021.png" type="Texture" id=211]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0006.png" type="Texture" id=212]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0008.png" type="Texture" id=213]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0015.png" type="Texture" id=214]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0009.png" type="Texture" id=215]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0014.png" type="Texture" id=216]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0023.png" type="Texture" id=217]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0013.png" type="Texture" id=218]
+[ext_resource path="res://assets/Actor/Player/NoMask/idle belakang0007.png" type="Texture" id=219]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 39 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 50 ), ExtResource( 29 ), ExtResource( 51 ), ExtResource( 59 ), ExtResource( 40 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 42 ), ExtResource( 31 ), ExtResource( 63 ), ExtResource( 61 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 56 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Side",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 20 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Back",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 52 ), ExtResource( 57 ), ExtResource( 32 ), ExtResource( 62 ), ExtResource( 38 ), ExtResource( 55 ), ExtResource( 37 ), ExtResource( 30 ), ExtResource( 58 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "Front",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 108 ), ExtResource( 114 ), ExtResource( 111 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 109 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 115 ), ExtResource( 101 ), ExtResource( 96 ), ExtResource( 94 ), ExtResource( 89 ), ExtResource( 92 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 110 ), ExtResource( 113 ), ExtResource( 95 ), ExtResource( 103 ) ],
+"loop": true,
+"name": "SideMask",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 78 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 88 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 66 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 80 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "IdleMask",
+"speed": 17.0
+}, {
+"frames": [ ExtResource( 146 ), ExtResource( 141 ), ExtResource( 145 ), ExtResource( 134 ), ExtResource( 143 ), ExtResource( 139 ) ],
+"loop": true,
+"name": "SpraySide",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 142 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 144 ), ExtResource( 136 ), ExtResource( 130 ) ],
+"loop": true,
+"name": "SprayFront",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 17.0
+}, {
+"frames": [ ExtResource( 86 ), ExtResource( 67 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 98 ), ExtResource( 105 ), ExtResource( 97 ), ExtResource( 104 ) ],
+"loop": true,
+"name": "FrontMask",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 188 ), ExtResource( 191 ), ExtResource( 179 ), ExtResource( 184 ), ExtResource( 182 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 180 ), ExtResource( 178 ), ExtResource( 185 ), ExtResource( 190 ), ExtResource( 192 ), ExtResource( 195 ), ExtResource( 186 ), ExtResource( 181 ), ExtResource( 193 ), ExtResource( 187 ), ExtResource( 194 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 172 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ) ],
+"loop": true,
+"name": "SideIdleMask",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 140 ), ExtResource( 135 ), ExtResource( 138 ), ExtResource( 133 ), ExtResource( 131 ), ExtResource( 137 ) ],
+"loop": true,
+"name": "SprayBack",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 156 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 157 ), ExtResource( 155 ), ExtResource( 158 ), ExtResource( 147 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 149 ), ExtResource( 167 ), ExtResource( 171 ), ExtResource( 169 ), ExtResource( 168 ), ExtResource( 166 ), ExtResource( 170 ) ],
+"loop": true,
+"name": "SideIdle",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 200 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 212 ), ExtResource( 219 ), ExtResource( 213 ), ExtResource( 215 ), ExtResource( 205 ), ExtResource( 209 ), ExtResource( 204 ), ExtResource( 218 ), ExtResource( 216 ), ExtResource( 214 ), ExtResource( 210 ), ExtResource( 201 ), ExtResource( 206 ), ExtResource( 203 ), ExtResource( 207 ), ExtResource( 211 ), ExtResource( 208 ), ExtResource( 217 ), ExtResource( 202 ) ],
+"loop": true,
+"name": "IdleBack",
+"speed": 24.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.3722, 29.2081 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.9374, 28.6009 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 2
+outline_color = Color( 0.666667, 0.662745, 0.243137, 1 )
+font_data = ExtResource( 124 )
+
+[sub_resource type="Animation" id=5]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 47 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_top = 0.4
+drag_margin_right = 0.4
+drag_margin_bottom = 0.4
+editor_draw_drag_margin = true
+
+[node name="AreaSpray" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="AreaSpray"]
+modulate = Color( 0.615686, 0.0156863, 0.890196, 1 )
+position = Vector2( 0, 28.5948 )
+shape = SubResource( 3 )
+
+[node name="ControlInterface" type="CanvasLayer" parent="."]
+
+[node name="Joystick" parent="ControlInterface" instance=ExtResource( 117 )]
+position = Vector2( 117.468, 361.927 )
+
+[node name="Grab" type="TouchScreenButton" parent="ControlInterface"]
+visible = false
+position = Vector2( 649, 251 )
+normal = ExtResource( 121 )
+pressed = ExtResource( 150 )
+action = "pick_up"
+
+[node name="RightContainer" type="Control" parent="ControlInterface"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -154.872
+margin_top = -158.435
+margin_right = -90.8717
+margin_bottom = -94.4353
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SprayButton" type="TouchScreenButton" parent="ControlInterface/RightContainer"]
+normal = ExtResource( 128 )
+pressed = ExtResource( 148 )
+action = "spray"
+
+[node name="PauseNode" type="Control" parent="ControlInterface"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -70.4907
+margin_top = 59.9496
+margin_right = -20.4907
+margin_bottom = 109.95
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="TouchScreenButton" parent="ControlInterface/PauseNode"]
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 122 )
+action = "pause"
+
+[node name="PauseOverlay" type="ColorRect" parent="ControlInterface"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.294118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="ControlInterface/PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -206.0
+margin_top = -148.5
+margin_right = 206.0
+margin_bottom = 148.5
+rect_scale = Vector2( 0.8, 0.8 )
+rect_pivot_offset = Vector2( 206, 148 )
+texture = ExtResource( 123 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelPause" type="Label" parent="ControlInterface/PauseOverlay/Background"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -51.5
+margin_top = 17.8582
+margin_right = 51.5
+margin_bottom = 60.8582
+custom_fonts/font = SubResource( 4 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonContainer" type="VBoxContainer" parent="ControlInterface/PauseOverlay/Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -73.224
+margin_right = 69.0
+margin_bottom = 113.776
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="ControlInterface/PauseOverlay/Background/ButtonContainer"]
+margin_right = 138.0
+margin_bottom = 43.0
+texture_normal = ExtResource( 127 )
+
+[node name="Retry" type="TextureButton" parent="ControlInterface/PauseOverlay/Background/ButtonContainer"]
+margin_top = 47.0
+margin_right = 138.0
+margin_bottom = 91.0
+texture_normal = ExtResource( 125 )
+
+[node name="Stage" type="TextureButton" parent="ControlInterface/PauseOverlay/Background/ButtonContainer"]
+margin_top = 95.0
+margin_right = 138.0
+margin_bottom = 139.0
+texture_normal = ExtResource( 126 )
+
+[node name="Home" type="TextureButton" parent="ControlInterface/PauseOverlay/Background/ButtonContainer"]
+margin_top = 143.0
+margin_right = 138.0
+margin_bottom = 187.0
+texture_normal = ExtResource( 154 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "zoom_in"
+anims/zoom_in = SubResource( 5 )
+
+[node name="TimerSpray" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="FootTile" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 153 )
+pitch_scale = 0.75
+
+[connection signal="area_entered" from="AreaSpray" to="." method="_on_AreaSpray_area_entered"]
+[connection signal="pressed" from="ControlInterface/PauseOverlay/Background/ButtonContainer/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="ControlInterface/PauseOverlay/Background/ButtonContainer/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="ControlInterface/PauseOverlay/Background/ButtonContainer/Stage" to="." method="_on_Stage_pressed"]
+[connection signal="pressed" from="ControlInterface/PauseOverlay/Background/ButtonContainer/Home" to="." method="_on_Home_pressed"]

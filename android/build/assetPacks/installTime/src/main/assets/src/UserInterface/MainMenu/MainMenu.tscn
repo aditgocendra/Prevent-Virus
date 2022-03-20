@@ -1,0 +1,122 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Background/Background-Menu.png" type="Texture" id=1]
+[ext_resource path="res://assets/Button/StartBtn.png" type="Texture" id=2]
+[ext_resource path="res://assets/Header/Title-MainMenu.png" type="Texture" id=3]
+[ext_resource path="res://assets/Button/EducationBtn.png" type="Texture" id=4]
+[ext_resource path="res://assets/Button/SettingBtn.png" type="Texture" id=5]
+[ext_resource path="res://assets/Button/AboutBtn.png" type="Texture" id=6]
+[ext_resource path="res://assets/Button/ExitBtn.png" type="Texture" id=7]
+[ext_resource path="res://src/UserInterface/MainMenu/MainMenu.gd" type="Script" id=8]
+[ext_resource path="res://src/UserInterface/Transition/Fader.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Button/StartBtnActive.png" type="Texture" id=10]
+[ext_resource path="res://assets/Button/EducationBtnActive.png" type="Texture" id=11]
+[ext_resource path="res://assets/Button/SettingsBtnActive.png" type="Texture" id=12]
+[ext_resource path="res://assets/Button/AcoutBtnActive.png" type="Texture" id=13]
+[ext_resource path="res://assets/Button/ExitBtnActive.png" type="Texture" id=14]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fader/Background/ContainerBtnMiddle:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1e-05 ), Vector2( 1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fader" parent="." instance=ExtResource( 9 )]
+
+[node name="Background" type="TextureRect" parent="Fader"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="TextureRect" parent="Fader/Background"]
+modulate = Color( 0.67451, 0.247059, 0.247059, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -258.5
+margin_top = 11.1107
+margin_right = 258.5
+margin_bottom = 86.1108
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContainerBtnMiddle" type="VBoxContainer" parent="Fader/Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.5
+margin_top = -126.702
+margin_right = 79.5
+margin_bottom = 202.298
+rect_scale = Vector2( 1, 1e-05 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="Fader/Background/ContainerBtnMiddle"]
+margin_right = 159.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 10 )
+
+[node name="Intro" type="TextureButton" parent="Fader/Background/ContainerBtnMiddle"]
+margin_top = 67.0
+margin_right = 159.0
+margin_bottom = 129.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+
+[node name="Settings" type="TextureButton" parent="Fader/Background/ContainerBtnMiddle"]
+margin_top = 133.0
+margin_right = 159.0
+margin_bottom = 196.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 12 )
+
+[node name="About" type="TextureButton" parent="Fader/Background/ContainerBtnMiddle"]
+margin_top = 200.0
+margin_right = 159.0
+margin_bottom = 263.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 13 )
+
+[node name="Exit" type="TextureButton" parent="Fader/Background/ContainerBtnMiddle"]
+margin_top = 267.0
+margin_right = 159.0
+margin_bottom = 329.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/start = SubResource( 1 )
+
+[connection signal="pressed" from="Fader/Background/ContainerBtnMiddle/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Fader/Background/ContainerBtnMiddle/Intro" to="." method="_on_Intro_pressed"]
+[connection signal="pressed" from="Fader/Background/ContainerBtnMiddle/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Fader/Background/ContainerBtnMiddle/About" to="." method="_on_About_pressed"]
+[connection signal="pressed" from="Fader/Background/ContainerBtnMiddle/Exit" to="." method="_on_Exit_pressed"]

@@ -1,0 +1,180 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/Background/Background-Menu.png" type="Texture" id=1]
+[ext_resource path="res://assets/Background/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/Education/Header.png" type="Texture" id=3]
+[ext_resource path="res://assets/Button/ArrowBtn.png" type="Texture" id=4]
+[ext_resource path="res://assets/Education/MaskEdu.png" type="Texture" id=6]
+[ext_resource path="res://assets/Font/OneDirection.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/UserInterface/Education/Education.gd" type="Script" id=8]
+[ext_resource path="res://assets/Button/BakMainMenu.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "change_content"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/EducationBG/ContentContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_content"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Background/EducationBG/ContentContainer:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 30, 95.5 ), Vector2( 30, 114.5 ), Vector2( 30, 114.5 ), Vector2( 30, 95.5 ) ]
+}
+
+[node name="Education" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="EducationBG" type="TextureRect" parent="Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.5
+margin_top = -187.5
+margin_right = 264.5
+margin_bottom = 187.5
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="Background/EducationBG"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -72.6935
+margin_top = -34.7963
+margin_right = 30.3065
+margin_bottom = 68.2037
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="TextureRect" parent="Background/EducationBG"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -173.0
+margin_top = -45.3846
+margin_right = 173.0
+margin_bottom = 52.6154
+texture = ExtResource( 3 )
+
+[node name="ContentContainer" type="Control" parent="Background/EducationBG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -234.5
+margin_top = -92.0
+margin_right = 234.5
+margin_bottom = 92.0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Illustration" type="TextureRect" parent="Background/EducationBG/ContentContainer"]
+margin_right = 237.0
+margin_bottom = 229.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelEducation" type="Label" parent="Background/EducationBG/ContentContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.5
+margin_top = -71.0
+margin_right = 223.5
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 1 )
+text = "Pakailah masker untuk langkah awal pencegahan tertular dari virus"
+align = 1
+autowrap = true
+
+[node name="Back" type="TextureButton" parent="Background/EducationBG"]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -107.756
+margin_top = -59.0
+margin_right = -5.75636
+margin_bottom = 59.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 51, 59 )
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+
+[node name="Next" type="TextureButton" parent="Background/EducationBG"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -4.34576
+margin_top = -59.0
+margin_right = 97.6542
+margin_bottom = 59.0
+rect_pivot_offset = Vector2( 51, 59 )
+size_flags_horizontal = 6
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/change_content = SubResource( 2 )
+
+[connection signal="pressed" from="Background/EducationBG/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Background/EducationBG/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Background/EducationBG/Next" to="." method="_on_Next_pressed"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Obstacle/Mask.png" type="Texture" id=1]
+[ext_resource path="res://src/Object/Mask/Mask.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.1391, 22.9234 )
+
+[node name="Mask" type="Sprite"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="AreaPick" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPick"]
+z_index = 1
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaPick" to="." method="_on_AreaPick_body_entered"]
+[connection signal="body_exited" from="AreaPick" to="." method="_on_AreaPick_body_exited"]

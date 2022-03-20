@@ -1,0 +1,917 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://src/Actor/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Tiles/Road2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Obstacle/Place.png" type="Texture" id=3]
+[ext_resource path="res://assets/Obstacle/Place2.png" type="Texture" id=4]
+[ext_resource path="res://src/Actor/NPC/Car/Car.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Tiles/Road1.png" type="Texture" id=6]
+[ext_resource path="res://assets/Obstacle/Place3.png" type="Texture" id=7]
+[ext_resource path="res://assets/Obstacle/Place4.png" type="Texture" id=8]
+[ext_resource path="res://assets/Obstacle/Lamp.png" type="Texture" id=9]
+[ext_resource path="res://assets/Obstacle/home6.png" type="Texture" id=10]
+[ext_resource path="res://assets/Obstacle/Plant.png" type="Texture" id=11]
+[ext_resource path="res://src/Game/Stage5/Stage5.gd" type="Script" id=12]
+[ext_resource path="res://assets/Obstacle/rumah utama.png" type="Texture" id=13]
+[ext_resource path="res://assets/Obstacle/Grass-Walk.png" type="Texture" id=14]
+[ext_resource path="res://assets/Obstacle/gedung 3.png" type="Texture" id=15]
+[ext_resource path="res://assets/Obstacle/cafe table 1.png" type="Texture" id=16]
+[ext_resource path="res://assets/Obstacle/cafe.png" type="Texture" id=17]
+[ext_resource path="res://assets/Decoration/WoodFrame.png" type="Texture" id=18]
+[ext_resource path="res://assets/Obstacle/Soap.png" type="Texture" id=19]
+[ext_resource path="res://src/UserInterface/Frame/EndStageFrame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Font/Blomster.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://src/Object/Soap/Soap.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actor/NPC/Human/Human.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/Obstacle/home market.png" type="Texture" id=24]
+[ext_resource path="res://assets/Obstacle/gedung kuning.png" type="Texture" id=25]
+[ext_resource path="res://src/UserInterface/Frame/IntroStage.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/Obstacle/Tree05.png" type="Texture" id=27]
+[ext_resource path="res://assets/Obstacle/gedung rumah sakit.png" type="Texture" id=28]
+[ext_resource path="res://assets/Obstacle/lapangan.png" type="Texture" id=29]
+[ext_resource path="res://assets/Obstacle/SmallTree.png" type="Texture" id=30]
+[ext_resource path="res://assets/Actor/NPC/Cars/car_green.png" type="Texture" id=31]
+[ext_resource path="res://assets/Actor/NPC/Cars/car_black.png" type="Texture" id=32]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Road1.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Road2.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 87.3798, 160.596 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.1597, 17.4329 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 85.6291, 163.226 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 60.8746, 46.0214 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 87.78, 143.405 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 96.3787, 59.9236 )
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 23.6609
+height = 12.1711
+
+[sub_resource type="Curve2D" id=9]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -43.5194, -57.2194, 0, 0, 0, 0, -556.987, -53.4439, 0, 0, 0, 0, -553.212, 395.84, 0, 0, 0, 0, -43.5193, 392.065, 0, 0, 0, 0, -43.5194, -57.2194 )
+}
+
+[sub_resource type="Curve2D" id=11]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -43.6019, -57.2974, 0, 0, 0, 0, -44.6019, 361.703, 0, 0, 0, 0, 910.398, 358.703, 0, 0, 0, 0, 910.398, -56.2974, 0, 0, 0, 0, -43.6019, -57.2974 )
+}
+
+[sub_resource type="Curve2D" id=12]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -41.2424, -55.3677, 0, 0, 0, 0, 449.841, -67.1403, 0, 0, 0, 0, 459.932, -771.812, 0, 0, 0, 0, -73.1964, -766.766, 0, 0, 0, 0, -41.2424, -55.3677 )
+}
+
+[sub_resource type="Curve2D" id=13]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1089.06, 461.03, 0, 0, 0, 0, 1233.65, 464.775, 0, 0, 0, 0, 1233.65, 351.653, 0, 0, 0, 0, 1087.56, 351.653, 0, 0, 0, 0, 1089.06, 461.03 )
+}
+
+[sub_resource type="Curve2D" id=14]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1088.66, 460.755, 0, 0, 0, 0, 1217.52, 459.257, 0, 0, 0, 0, 1218.26, 576.874, 0, 0, 0, 0, 1088.66, 576.874, 0, 0, 0, 0, 1088.66, 460.755 )
+}
+
+[sub_resource type="Curve2D" id=15]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1087.54, 460.803, 0, 0, 0, 0, 1247.07, 458.422, 0, 0, 0, 0, 1244.69, 410.006, 0, 0, 0, 0, 1087.54, 411.593, 0, 0, 0, 0, 1087.54, 460.803 )
+}
+
+[sub_resource type="Curve2D" id=16]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1085.4, 461.496, 0, 0, 0, 0, 1290.22, 460.552, 0, 0, 0, 0, 1288.33, 529.455, 0, 0, 0, 0, 1084.45, 528.511, 0, 0, 0, 0, 1085.4, 461.496 )
+}
+
+[sub_resource type="Curve2D" id=17]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1086.31, 462.388, 0, 0, 0, 0, 1219.12, 460.386, 0, 0, 0, 0, 1218.46, 697.32, 0, 0, 0, 0, 1086.31, 696.653, 0, 0, 0, 0, 1086.31, 462.388 )
+}
+
+[sub_resource type="Curve2D" id=18]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1085.93, 463.267, 0, 0, 0, 0, 1235.86, 462.637, 0, 0, 0, 0, 1236.49, 519.334, 0, 0, 0, 0, 1085.93, 519.334, 0, 0, 0, 0, 1085.93, 463.267 )
+}
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 1041.65, 6.01985 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 5.99886, 763.678 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 32
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 32
+font_data = ExtResource( 21 )
+
+[node name="Stage5" type="Node2D"]
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1472.69 ],
+"_edit_vertical_guides_": [ 1857.61 ]
+}
+limit_screen_right = 1858
+limit_screen_bottom = 1473
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1209.92, 158.328 )
+z_index = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, -1073741824, 0, 1, -1073741824, 0, 2, -1073741824, 0, 3, -1073741824, 0, 4, -1073741824, 0, 5, -1073741824, 0, 6, -1610612735, 0, 7, -1073741824, 0, 8, -1073741824, 0, 9, -1073741824, 0, 10, -1073741824, 0, 11, -1073741824, 0, 12, -1073741824, 0, 13, -1073741823, 0, 14, -1073741824, 0, 15, -1073741824, 0, 16, -1073741824, 0, 17, -1073741824, 0, 18, -1073741824, 0, 19, -1073741824, 0, 20, -1073741824, 0, 21, -1073741824, 0, 22, -1073741824, 0, 23, -1073741824, 0, 24, -1073741824, 0, 25, -1073741824, 0, 26, -1073741824, 0, 27, -1073741824, 0, 28, -1610612735, 0, 65536, -1073741824, 0, 65537, -1073741824, 0, 65538, -1073741824, 0, 65539, -1073741824, 0, 65540, -1073741824, 0, 65541, -1073741824, 0, 65542, -1610612735, 0, 65543, -1073741824, 0, 65544, -1073741824, 0, 65545, -1073741824, 0, 65546, -1073741824, 0, 65547, -1073741824, 0, 65548, -1073741824, 0, 65549, -1073741823, 0, 65550, -1073741824, 0, 65551, -1073741824, 0, 65552, -1073741824, 0, 65553, -1073741824, 0, 65554, -1073741824, 0, 65555, -1073741824, 0, 65556, -1073741824, 0, 65557, -1073741824, 0, 65558, -1073741824, 0, 65559, -1073741824, 0, 65560, -1073741824, 0, 65561, -1073741824, 0, 65562, -1073741824, 0, 65563, -1073741824, 0, 65564, -1610612735, 0, 131072, -1073741824, 0, 131073, -1073741824, 0, 131074, -1073741824, 0, 131075, -1073741824, 0, 131076, -1073741824, 0, 131077, -1073741824, 0, 131078, -1610612735, 0, 131079, -1073741824, 0, 131080, -1073741824, 0, 131081, -1073741824, 0, 131082, -1073741824, 0, 131083, -1073741824, 0, 131084, -1073741824, 0, 131085, -1073741823, 0, 131086, -1073741824, 0, 131087, -1073741824, 0, 131088, -1073741824, 0, 131089, -1073741824, 0, 131090, -1073741824, 0, 131091, -1073741824, 0, 131092, -1073741824, 0, 131093, -1073741824, 0, 131094, -1073741824, 0, 131095, -1073741824, 0, 131096, -1073741824, 0, 131097, -1073741824, 0, 131098, -1073741824, 0, 131099, -1073741824, 0, 131100, -1610612735, 0, 196608, -1073741824, 0, 196609, -1073741824, 0, 196610, -1073741824, 0, 196611, -1073741824, 0, 196612, -1073741824, 0, 196613, -1073741824, 0, 196614, -1610612735, 0, 196615, -1073741824, 0, 196616, -1073741824, 0, 196617, -1073741824, 0, 196618, -1073741824, 0, 196619, -1073741824, 0, 196620, -1073741824, 0, 196621, -1073741823, 0, 196622, -1073741824, 0, 196623, -1073741824, 0, 196624, -1073741824, 0, 196625, -1073741824, 0, 196626, -1073741824, 0, 196627, -1073741824, 0, 196628, -1073741824, 0, 196629, -1073741824, 0, 196630, -1073741824, 0, 196631, -1073741824, 0, 196632, -1073741824, 0, 196633, -1073741824, 0, 196634, -1073741824, 0, 196635, -1073741824, 0, 196636, -1610612735, 0, 262144, -1073741824, 0, 262145, -1073741824, 0, 262146, -1073741824, 0, 262147, -1073741824, 0, 262148, -1073741824, 0, 262149, -1073741824, 0, 262150, 1610612736, 0, 262151, -1073741824, 0, 262152, -1073741824, 0, 262153, -1073741824, 0, 262154, -1073741824, 0, 262155, -1073741824, 0, 262156, -1073741824, 0, 262157, -1073741824, 0, 262158, -1073741824, 0, 262159, -1073741824, 0, 262160, -1073741824, 0, 262161, -1073741824, 0, 262162, -1073741824, 0, 262163, -1073741824, 0, 262164, -1073741824, 0, 262165, -1073741824, 0, 262166, -1073741824, 0, 262167, -1073741824, 0, 262168, -1073741824, 0, 262169, -1073741824, 0, 262170, -1073741824, 0, 262171, -1073741824, 0, 262172, 1610612736, 0, 327680, -1073741824, 0, 327681, 1610612737, 0, 327682, 1610612737, 0, 327683, 1610612737, 0, 327684, 1610612737, 0, 327685, -1073741824, 0, 327686, 1610612736, 0, 327687, -1073741824, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 0, 0, 327708, 1610612736, 0, 393216, -1073741824, 0, 393217, -1073741824, 0, 393218, -1073741824, 0, 393219, -1073741824, 0, 393220, -1073741824, 0, 393221, -1073741824, 0, 393222, 1610612736, 0, 393223, -1073741824, 0, 393224, -1073741824, 0, 393225, -1073741824, 0, 393226, -1073741824, 0, 393227, -1073741824, 0, 393228, -1073741824, 0, 393229, -1073741824, 0, 393230, -1073741824, 0, 393231, 1610612736, 0, 393232, -1073741824, 0, 393233, -1073741824, 0, 393234, -1073741824, 0, 393235, -1073741824, 0, 393236, -1073741824, 0, 393237, -1073741824, 0, 393238, -1073741824, 0, 393239, -1073741824, 0, 393240, -1073741824, 0, 393241, -1073741824, 0, 393242, -1073741824, 0, 393243, -1073741824, 0, 393244, 1610612736, 0, 458752, -1073741824, 0, 458753, -1073741824, 0, 458754, 1610612736, 0, 458755, 1610612736, 0, 458756, 1610612736, 0, 458757, 1610612736, 0, 458758, -1610612735, 0, 458759, -1073741824, 0, 458760, -1073741824, 0, 458761, -1073741824, 0, 458762, -1073741824, 0, 458763, -1073741824, 0, 458764, -1073741824, 0, 458765, -1073741824, 0, 458766, -1073741824, 0, 458767, 1610612736, 0, 458768, -1073741824, 0, 458769, -1610612735, 0, 458770, -1073741824, 0, 458771, -1073741824, 0, 458772, -1073741824, 0, 458773, -1073741824, 0, 458774, -1073741824, 0, 458775, -1073741824, 0, 458776, -1073741824, 0, 458777, -1073741824, 0, 458778, -1073741824, 0, 458779, -1073741824, 0, 458780, -1610612735, 0, 524288, -1073741824, 0, 524289, 1610612736, 0, 524290, 1610612736, 0, 524291, 1610612736, 0, 524292, 1610612736, 0, 524293, 1610612736, 0, 524294, -1610612735, 0, 524295, 1610612736, 0, 524296, 1610612736, 0, 524297, 1610612736, 0, 524298, 1610612736, 0, 524299, 1610612736, 0, 524300, 1610612736, 0, 524301, 1610612736, 0, 524302, 1610612736, 0, 524303, 1610612736, 0, 524304, -1073741824, 0, 524305, -1073741824, 0, 524306, -1073741824, 0, 524307, -1073741824, 0, 524308, -1073741824, 0, 524309, -1073741824, 0, 524310, -1073741824, 0, 524311, -1073741824, 0, 524312, -1073741824, 0, 524313, -1073741824, 0, 524314, -1073741824, 0, 524315, -1073741824, 0, 524316, -1610612735, 0, 589824, -1073741824, 0, 589825, -1073741824, 0, 589826, -1073741824, 0, 589827, -1073741824, 0, 589828, -1073741824, 0, 589829, 1610612736, 0, 589830, -1073741823, 0, 589831, -1073741824, 0, 589832, 1610612737, 0, 589833, 1610612737, 0, 589834, 1610612737, 0, 589835, 1610612737, 0, 589836, 1610612737, 0, 589837, 1610612737, 0, 589838, 1610612737, 0, 589839, 1610612737, 0, 589840, 1610612737, 0, 589841, 1610612737, 0, 589842, 1610612737, 0, 589843, 1610612737, 0, 589844, 1610612737, 0, 589845, 1610612737, 0, 589846, 1610612737, 0, 589847, 1610612737, 0, 589848, 1610612737, 0, 589849, 1610612737, 0, 589850, 1610612737, 0, 589851, -1073741824, 0, 589852, -1610612735, 0, 655360, -1073741824, 0, 655361, -1073741824, 0, 655362, -1073741824, 0, 655363, -1073741824, 0, 655364, -1073741824, 0, 655365, 1610612736, 0, 655366, -1073741823, 0, 655367, -1073741824, 0, 655368, 1610612736, 0, 655369, 1610612736, 0, 655370, -1073741824, 0, 655371, 1610612736, 0, 655372, -1073741824, 0, 655373, -1073741824, 0, 655374, -1073741824, 0, 655375, 1610612736, 0, 655376, 1610612736, 0, 655377, 1610612736, 0, 655378, 1610612736, 0, 655379, 1610612736, 0, 655380, 1610612736, 0, 655381, -1073741824, 0, 655382, -1073741824, 0, 655383, -1073741824, 0, 655384, -1073741824, 0, 655385, -1073741824, 0, 655386, -1073741824, 0, 655387, -1073741824, 0, 655388, -1610612735, 0, 720896, -1073741824, 0, 720897, -1073741824, 0, 720898, -1073741824, 0, 720899, -1073741824, 0, 720900, -1073741824, 0, 720901, 1610612736, 0, 720902, -1073741823, 0, 720903, -1073741824, 0, 720904, -1073741824, 0, 720905, 1610612736, 0, 720906, 1610612736, 0, 720907, 1610612736, 0, 720908, -1073741824, 0, 720909, -1073741824, 0, 720910, -1073741824, 0, 720911, -1073741824, 0, 720912, -1073741824, 0, 720913, -1073741824, 0, 720914, -1073741824, 0, 720915, -1073741824, 0, 720916, -1073741824, 0, 720917, -1610612735, 0, 720918, 1610612736, 0, 720919, 1610612736, 0, 720920, -1073741824, 0, 720921, -1073741824, 0, 720922, -1073741824, 0, 720923, -1073741824, 0, 720924, -1610612735, 0, 786432, -1073741824, 0, 786433, -1073741824, 0, 786434, -1073741824, 0, 786435, -1073741824, 0, 786436, -1073741824, 0, 786437, 1610612736, 0, 786438, -1073741823, 0, 786439, -1073741824, 0, 786440, -1073741824, 0, 786441, 1610612736, 0, 786442, 1610612736, 0, 786443, 1610612736, 0, 786444, -1073741824, 0, 786445, -1073741824, 0, 786446, -1073741824, 0, 786447, -1073741824, 0, 786448, -1073741824, 0, 786449, -1073741824, 0, 786450, -1073741824, 0, 786451, -1073741824, 0, 786452, -1073741824, 0, 786453, -1610612735, 0, 786454, -1073741824, 0, 786455, -1073741824, 0, 786456, -1073741824, 0, 786457, -1073741824, 0, 786458, -1073741824, 0, 786459, -1073741824, 0, 786460, -1610612735, 0, 851968, -1073741824, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 1610612736, 0, 851974, -1073741823, 0, 851975, 1610612736, 0, 851976, 1610612736, 0, 851977, 1610612736, 0, 851978, 1610612736, 0, 851979, 1610612736, 0, 851980, -1073741824, 0, 851981, -1073741824, 0, 851982, -1073741824, 0, 851983, -1073741824, 0, 851984, -1073741824, 0, 851985, -1073741824, 0, 851986, -1073741824, 0, 851987, -1073741824, 0, 851988, -1073741824, 0, 851989, -1610612735, 0, 851990, -1073741824, 0, 851991, -1073741824, 0, 851992, -1073741824, 0, 851993, -1073741824, 0, 851994, -1073741824, 0, 851995, -1073741824, 0, 851996, -1610612735, 0, 917504, -1073741824, 0, 917505, -1073741824, 0, 917506, -1073741824, 0, 917507, -1073741824, 0, 917508, -1073741824, 0, 917509, 1610612736, 0, 917510, -1073741823, 0, 917511, -1073741824, 0, 917512, -1073741824, 0, 917513, -1073741824, 0, 917514, 1610612736, 0, 917515, 1610612736, 0, 917516, -1073741824, 0, 917517, -1073741824, 0, 917518, -1073741824, 0, 917519, -1073741824, 0, 917520, -1073741824, 0, 917521, -1073741824, 0, 917522, -1073741824, 0, 917523, -1073741824, 0, 917524, -1073741824, 0, 917525, -1610612735, 0, 917526, -1073741824, 0, 917527, -1073741824, 0, 917528, -1073741824, 0, 917529, -1073741824, 0, 917530, -1073741824, 0, 917531, -1073741824, 0, 917532, -1610612735, 0, 983040, -1073741824, 0, 983041, -1073741824, 0, 983042, -1073741824, 0, 983043, -1073741824, 0, 983044, -1073741824, 0, 983045, 1610612736, 0, 983046, 1610612736, 0, 983047, -1073741824, 0, 983048, -1073741824, 0, 983049, -1073741824, 0, 983050, -1073741824, 0, 983051, -1073741824, 0, 983052, -1073741824, 0, 983053, -1073741824, 0, 983054, -1073741824, 0, 983055, -1073741824, 0, 983056, 1610612736, 0, 983057, 1610612736, 0, 983058, 1610612736, 0, 983059, 1610612736, 0, 983060, 1610612736, 0, 983061, 1610612736, 0, 983062, 1610612736, 0, 983063, 1610612736, 0, 983064, 1610612736, 0, 983065, -1073741824, 0, 983066, -1073741824, 0, 983067, -1073741824, 0, 983068, -1610612735, 0, 1048576, -1073741824, 0, 1048577, 1610612737, 0, 1048578, 1610612737, 0, 1048579, 1610612737, 0, 1048580, 1610612737, 0, 1048581, 1610612736, 0, 1048582, 1610612736, 0, 1048583, 1610612736, 0, 1048584, 1610612737, 0, 1048585, 1610612737, 0, 1048586, 1610612737, 0, 1048587, 1610612737, 0, 1048588, 1610612737, 0, 1048589, 1610612737, 0, 1048590, 1610612737, 0, 1048591, 1610612737, 0, 1048592, 1610612737, 0, 1048593, 1610612737, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, -1073741824, 0, 1048604, -1610612735, 0, 1114112, -1073741824, 0, 1114113, -1073741824, 0, 1114114, -1073741824, 0, 1114115, -1073741824, 0, 1114116, -1073741824, 0, 1114117, 1610612736, 0, 1114118, 1610612736, 0, 1114119, 1610612736, 0, 1114120, 1610612736, 0, 1114121, 0, 0, 1114122, -1073741824, 0, 1114123, -1073741824, 0, 1114124, -1073741824, 0, 1114125, -1073741824, 0, 1114126, -1073741824, 0, 1114127, 1610612736, 0, 1114128, -1073741824, 0, 1114129, -1073741824, 0, 1114130, -1073741824, 0, 1114131, -1073741824, 0, 1114132, -1073741824, 0, 1114133, -1073741824, 0, 1114134, -1073741824, 0, 1114135, 1610612736, 0, 1114136, -1073741824, 0, 1114137, -1073741824, 0, 1114138, -1073741824, 0, 1114139, -1073741824, 0, 1114140, -1610612735, 0, 1179648, -1073741824, 0, 1179649, -1073741824, 0, 1179650, -1073741824, 0, 1179651, -1073741824, 0, 1179652, -1073741824, 0, 1179653, -1073741824, 0, 1179654, -1073741824, 0, 1179655, -1073741824, 0, 1179656, -1073741824, 0, 1179657, -1073741824, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, -1610612736, 0, 1179664, -1073741824, 0, 1179665, -1073741824, 0, 1179666, -1073741824, 0, 1179667, -1073741824, 0, 1179668, -1073741824, 0, 1179669, -1073741824, 0, 1179670, -1073741824, 0, 1179671, -1073741824, 0, 1179672, -1073741824, 0, 1179673, -1073741824, 0, 1179674, -1073741824, 0, 1179675, -1073741824, 0, 1179676, -1610612735, 0, 1245184, -1073741824, 0, 1245185, -1073741824, 0, 1245186, -1073741824, 0, 1245187, -1073741824, 0, 1245188, -1073741824, 0, 1245189, -1073741824, 0, 1245190, -1073741824, 0, 1245191, -1073741824, 0, 1245192, -1073741824, 0, 1245193, -1073741824, 0, 1245194, -1073741824, 0, 1245195, -1073741824, 0, 1245196, -1073741824, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, -1610612736, 0, 1245200, -1073741824, 0, 1245201, -1073741824, 0, 1245202, -1073741824, 0, 1245203, -1073741824, 0, 1245204, -1073741824, 0, 1245205, -1073741824, 0, 1245206, -1073741824, 0, 1245207, -1073741824, 0, 1245208, -1073741824, 0, 1245209, -1073741824, 0, 1245210, -1073741824, 0, 1245211, -1073741824, 0, 1245212, -1610612735, 0, 1310720, -1073741824, 0, 1310721, -1073741824, 0, 1310722, -1073741824, 0, 1310723, -1073741824, 0, 1310724, -1073741824, 0, 1310725, -1073741824, 0, 1310726, -1073741824, 0, 1310727, -1073741824, 0, 1310728, -1073741824, 0, 1310729, -1073741824, 0, 1310730, -1073741824, 0, 1310731, -1073741824, 0, 1310732, -1073741824, 0, 1310733, -1073741824, 0, 1310734, -1073741824, 0, 1310735, -1610612736, 0, 1310736, -1073741824, 0, 1310737, -1073741824, 0, 1310738, -1073741824, 0, 1310739, -1073741824, 0, 1310740, -1073741824, 0, 1310741, -1073741824, 0, 1310742, -1073741824, 0, 1310743, 1610612736, 0, 1310744, -1073741824, 0, 1310745, -1073741824, 0, 1310746, -1073741824, 0, 1310747, -1073741824, 0, 1310748, -1610612735, 0, 1376256, -1073741824, 0, 1376257, -1073741824, 0, 1376258, -1073741824, 0, 1376259, -1073741824, 0, 1376260, -1073741824, 0, 1376261, -1073741824, 0, 1376262, -1073741824, 0, 1376263, -1073741824, 0, 1376264, -1073741824, 0, 1376265, -1073741824, 0, 1376266, -1073741824, 0, 1376267, -1073741824, 0, 1376268, -1073741824, 0, 1376269, -1073741824, 0, 1376270, -1073741824, 0, 1376271, -1610612736, 0, 1376272, -1073741824, 0, 1376273, -1073741824, 0, 1376274, -1073741824, 0, 1376275, -1073741824, 0, 1376276, -1073741824, 0, 1376277, -1073741824, 0, 1376278, -1073741824, 0, 1376279, 1610612736, 0, 1376280, -1073741824, 0, 1376281, -1073741824, 0, 1376282, -1073741824, 0, 1376283, -1073741824, 0, 1376284, -1610612735, 0, 1441792, -1073741824, 0, 1441793, -1073741824, 0, 1441794, -1073741824, 0, 1441795, -1073741824, 0, 1441796, -1073741824, 0, 1441797, -1073741824, 0, 1441798, -1073741824, 0, 1441799, -1073741824, 0, 1441800, -1073741824, 0, 1441801, -1073741824, 0, 1441802, -1073741824, 0, 1441803, -1073741824, 0, 1441804, -1073741824, 0, 1441805, -1073741824, 0, 1441806, -1073741824, 0, 1441807, -1073741824, 0, 1441808, -1073741824, 0, 1441809, -1073741824, 0, 1441810, -1073741824, 0, 1441811, -1073741824, 0, 1441812, -1073741824, 0, 1441813, -1073741824, 0, 1441814, -1073741824, 0, 1441815, -1073741824, 0, 1441816, -1073741824, 0, 1441817, -1073741824, 0, 1441818, -1073741824, 0, 1441819, -1073741824, 0, 1441820, -1073741824, 0 )
+
+[node name="ObstacleGroup" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Place" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 192.68, 704.169 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+
+[node name="Grass-Walk" type="Sprite" parent="ObstacleGroup/Place"]
+rotation = -1.5708
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place/Grass-Walk"]
+position = Vector2( 0, 3.74573 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place/Grass-Walk/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Lamp" type="Sprite" parent="ObstacleGroup/Place"]
+position = Vector2( -232.193, 71.4178 )
+rotation = -1.5708
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place/Lamp"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place/Lamp/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp2" type="Sprite" parent="ObstacleGroup/Place"]
+position = Vector2( -232.193, -70.9533 )
+rotation = -1.5708
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place/Lamp2"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place/Lamp2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp3" type="Sprite" parent="ObstacleGroup/Place"]
+position = Vector2( 161.29, 71.4178 )
+rotation = -1.5708
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place/Lamp3"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place/Lamp3/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp4" type="Sprite" parent="ObstacleGroup/Place"]
+position = Vector2( 161.29, -70.9534 )
+rotation = -1.5708
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place/Lamp4"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place/Lamp4/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Place2" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 319.29, 1284.43 )
+texture = ExtResource( 4 )
+
+[node name="Hospital" type="Sprite" parent="ObstacleGroup/Place2"]
+position = Vector2( 87.4532, -108.737 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 28 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place2/Hospital"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place2/Hospital/StaticBody2D"]
+polygon = PoolVector2Array( -106.332, 240.485, 109.918, 241.11, 148.668, 218.61, 148.043, 85.4854, -148.832, 82.3604, -148.832, 215.485 )
+
+[node name="Grass" type="Sprite" parent="ObstacleGroup/Place2"]
+position = Vector2( -109.496, -4.7959 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place2/Grass"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place2/Grass/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="Lamp" type="Sprite" parent="ObstacleGroup/Place2"]
+position = Vector2( -193.406, 36.9994 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place2/Lamp"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place2/Lamp/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp2" type="Sprite" parent="ObstacleGroup/Place2"]
+position = Vector2( -193.406, -111.1 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place2/Lamp2"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place2/Lamp2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Place4" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 895.245, 1284.43 )
+texture = ExtResource( 4 )
+
+[node name="FieldBall" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( 66.6708, 20.6362 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 29 )
+
+[node name="Lamp" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( 190.818, -109.468 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Lamp"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place4/Lamp/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp2" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( 62.0836, -109.468 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Lamp2"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place4/Lamp2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp3" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -52.4075, -109.468 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Lamp3"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place4/Lamp3/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="SmallTree" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -107.973, 56.278 )
+z_index = 4
+texture = ExtResource( 30 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/SmallTree"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/SmallTree/StaticBody2D"]
+polygon = PoolVector2Array( -6.45074, 24.8933, -10.3157, 32.3259, 4.84674, 35.8936, 8.71167, 32.0286, 2.76563, 20.7312 )
+
+[node name="SmallTree2" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -134.73, 30.71 )
+z_index = 3
+texture = ExtResource( 30 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/SmallTree2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/SmallTree2/StaticBody2D"]
+polygon = PoolVector2Array( -6.45074, 24.8933, -10.3157, 32.3259, 4.84674, 35.8936, 8.71167, 32.0286, 2.76563, 20.7312 )
+
+[node name="SmallTree4" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -195.73, 30.71 )
+z_index = 3
+texture = ExtResource( 30 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/SmallTree4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/SmallTree4/StaticBody2D"]
+polygon = PoolVector2Array( -6.45074, 24.8933, -10.3157, 32.3259, 4.84674, 35.8936, 8.71167, 32.0286, 2.76563, 20.7312 )
+
+[node name="SmallTree3" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -162.763, 56.278 )
+z_index = 4
+texture = ExtResource( 30 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/SmallTree3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/SmallTree3/StaticBody2D"]
+polygon = PoolVector2Array( -6.45074, 24.8933, -10.3157, 32.3259, 4.84674, 35.8936, 8.71167, 32.0286, 2.76563, 20.7312 )
+
+[node name="Tree" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -156.954, -71.4331 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Tree"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/Tree/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Tree3" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -208.09, -55.3789 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Tree3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/Tree3/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Tree2" type="Sprite" parent="ObstacleGroup/Place4"]
+position = Vector2( -110.324, -41.2725 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place4/Tree2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place4/Tree2/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Place5" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 1472.09, 1284.43 )
+texture = ExtResource( 4 )
+
+[node name="YellowBuilding" type="Sprite" parent="ObstacleGroup/Place5"]
+position = Vector2( 0, -39.8649 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place5/YellowBuilding"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place5/YellowBuilding/StaticBody2D"]
+polygon = PoolVector2Array( 63.2476, 165.983, 85.5703, 166.479, 86.5625, 117.865, 169.901, 117.369, 170.397, -164.891, -171.39, -164.891, -170.398, 114.392, -86.0674, 114.392, -85.5713, 163.999, -63.2484, 164.495, -63.2484, 81.1564, 63.2476, 81.6525 )
+
+[node name="Tree" type="Sprite" parent="ObstacleGroup/Place5"]
+position = Vector2( 181.472, 9.29004 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place5/Tree"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place5/Tree/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Tree2" type="Sprite" parent="ObstacleGroup/Place5"]
+position = Vector2( 181.472, -83.9441 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place5/Tree2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place5/Tree2/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Tree3" type="Sprite" parent="ObstacleGroup/Place5"]
+position = Vector2( -182.637, 9.29004 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place5/Tree3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place5/Tree3/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Tree4" type="Sprite" parent="ObstacleGroup/Place5"]
+position = Vector2( -182.637, -83.9441 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place5/Tree4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place5/Tree4/StaticBody2D"]
+polygon = PoolVector2Array( -18.8022, 46.8059, -0.386719, 55.3998, 18.5547, 47.1567, 13.4058, 34.6563, -13.7229, 35.028 )
+
+[node name="Place6" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 1598.04, 832.092 )
+texture = ExtResource( 3 )
+
+[node name="MarketHome" type="Sprite" parent="ObstacleGroup/Place6"]
+position = Vector2( -24.5625, -95 )
+texture = ExtResource( 24 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place6/MarketHome"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place6/MarketHome/StaticBody2D"]
+polygon = PoolVector2Array( -52.4728, 196.847, -31.067, 196.847, -31.067, 208.739, 11.7444, 208.739, 12.339, 193.279, 105.692, 193.279, 106.286, 35.1145, 116.989, 16.0871, 116.989, -34.4542, -72.0945, -32.6704, -71.4999, 8.35724, -52.4727, 32.1414 )
+
+[node name="Place7" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 895.054, 832.092 )
+texture = ExtResource( 7 )
+
+[node name="Cafe" type="Sprite" parent="ObstacleGroup/Place7"]
+position = Vector2( -21.4512, -35.3262 )
+z_index = 1
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place7/Cafe"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place7/Cafe/StaticBody2D"]
+polygon = PoolVector2Array( -80.8058, 127.241, 92.2487, 127.991, 91.4995, 83.7905, 91.4995, 83.7905, 135.7, 85.2889, 134.201, -101.25, -119.762, -98.2538, -117.514, 66.5601, -136.243, 92.0313, -136.992, 154.211, -95.0395, 153.462 )
+
+[node name="CafeTable" type="Sprite" parent="ObstacleGroup/Place7"]
+position = Vector2( -281.889, -66.2128 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place7/CafeTable"]
+position = Vector2( 0, 18.0203 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="ObstacleGroup/Place7/CafeTable/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="CafeTable2" type="Sprite" parent="ObstacleGroup/Place7"]
+position = Vector2( 264.793, 22.782 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place7/CafeTable2"]
+position = Vector2( 0, 18.0203 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="ObstacleGroup/Place7/CafeTable2/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="Place8" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 192.726, 127.187 )
+texture = ExtResource( 3 )
+
+[node name="Minimarket" type="Sprite" parent="ObstacleGroup/Place8"]
+position = Vector2( -0.0189514, -35.4725 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place8/Minimarket"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place8/Minimarket/StaticBody2D"]
+polygon = PoolVector2Array( -99.6289, 81.0339, 98.5847, 82.0826, 98.0604, -118.753, 41.4279, -118.753, 41.9523, -139.728, 13.1117, -140.252, 14.1604, -117.18, -87.5682, -116.131, -101.202, -81.5223 )
+
+[node name="Place9" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 1343.13, 127.207 )
+texture = ExtResource( 7 )
+
+[node name="Home" type="Sprite" parent="ObstacleGroup/Place9"]
+position = Vector2( 201.401, -11.3057 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place9/Home"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place9/Home/StaticBody2D"]
+polygon = PoolVector2Array( -177.295, -29.2866, -176.613, 52.9742, 38.118, 51.7943, 39.8877, 129.074, 175.57, 129.074, 175.57, -29.0249 )
+
+[node name="Home2" type="Sprite" parent="ObstacleGroup/Place9"]
+position = Vector2( -203.915, -11.3057 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place9/Home2"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="ObstacleGroup/Place9/Home2/StaticBody2D"]
+polygon = PoolVector2Array( -175.727, 76.1014, -175.267, -130.501, 177.233, -130.501, 178.317, 7.4343, -40.2673, 7.4343, -39.4982, 75.3139 )
+
+[node name="Grass" type="Sprite" parent="ObstacleGroup/Place9"]
+position = Vector2( -0.416138, -4.96945 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place9/Grass"]
+position = Vector2( 0, -20.9763 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place9/Grass/StaticBody2D"]
+shape = SubResource( 6 )
+
+[node name="Place10" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 640.564, 127.187 )
+texture = ExtResource( 3 )
+
+[node name="Home" type="Sprite" parent="ObstacleGroup/Place10"]
+scale = Vector2( 0.8, 0.8 )
+z_index = 3
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place10/Home"]
+position = Vector2( 0, 39.4692 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place10/Home/StaticBody2D"]
+shape = SubResource( 7 )
+
+[node name="Plant" type="Sprite" parent="ObstacleGroup/Place10"]
+position = Vector2( -115.293, 101.812 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 3
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place10/Plant"]
+position = Vector2( 0, 36.8357 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place10/Plant/StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="Plant2" type="Sprite" parent="ObstacleGroup/Place10"]
+position = Vector2( 108.96, 101.812 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 3
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place10/Plant2"]
+position = Vector2( 0, 36.8357 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place10/Plant2/StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="Place11" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 768.823, 479.556 )
+texture = ExtResource( 8 )
+
+[node name="Lamp" type="Sprite" parent="ObstacleGroup/Place11"]
+position = Vector2( -215.211, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place11/Lamp"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place11/Lamp/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp2" type="Sprite" parent="ObstacleGroup/Place11"]
+position = Vector2( -6.50916, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place11/Lamp2"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place11/Lamp2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp3" type="Sprite" parent="ObstacleGroup/Place11"]
+position = Vector2( 210.476, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place11/Lamp3"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place11/Lamp3/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Place12" type="Sprite" parent="ObstacleGroup"]
+position = Vector2( 1470.63, 479.556 )
+texture = ExtResource( 8 )
+
+[node name="Lamp" type="Sprite" parent="ObstacleGroup/Place12"]
+position = Vector2( -215.1, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place12/Lamp"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place12/Lamp/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp2" type="Sprite" parent="ObstacleGroup/Place12"]
+position = Vector2( -6.39795, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place12/Lamp2"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place12/Lamp2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Lamp3" type="Sprite" parent="ObstacleGroup/Place12"]
+position = Vector2( 210.588, -37.5607 )
+z_index = 3
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleGroup/Place12/Lamp3"]
+position = Vector2( 0, 34.4326 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleGroup/Place12/Lamp3/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Objective" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Soap" parent="Objective" instance=ExtResource( 22 )]
+position = Vector2( 1544.78, 189.084 )
+
+[node name="Soap2" parent="Objective" instance=ExtResource( 22 )]
+position = Vector2( 544.942, 147.289 )
+
+[node name="Soap3" parent="Objective" instance=ExtResource( 22 )]
+position = Vector2( 732.325, 1285.02 )
+
+[node name="PathCarAI" type="Node2D" parent="."]
+
+[node name="PathCar1" type="Path2D" parent="PathCarAI"]
+position = Vector2( -60.9598, 406.939 )
+curve = SubResource( 9 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathCarAI/PathCar1"]
+position = Vector2( -0.77771, -53.5843 )
+rotation = 1.5635
+
+[node name="Car" parent="PathCarAI/PathCar1/PathFollow2D" instance=ExtResource( 5 )]
+
+[node name="PathCar2" type="Path2D" parent="PathCarAI"]
+position = Vector2( 1931.58, 659.056 )
+curve = SubResource( 10 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathCarAI/PathCar2"]
+position = Vector2( -43.5194, -57.2194 )
+rotation = 3.13424
+
+[node name="Car" parent="PathCarAI/PathCar2/PathFollow2D" instance=ExtResource( 5 )]
+texture = ExtResource( 31 )
+
+[node name="PathCar3" type="Path2D" parent="PathCarAI"]
+position = Vector2( 908.602, -8.70258 )
+curve = SubResource( 11 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathCarAI/PathCar3"]
+position = Vector2( -43.6019, -57.2974 )
+rotation = 1.57318
+
+[node name="Car" parent="PathCarAI/PathCar3/PathFollow2D" instance=ExtResource( 5 )]
+texture = ExtResource( 32 )
+
+[node name="PathCar4" type="Path2D" parent="PathCarAI"]
+position = Vector2( -38.8588, 1120.19 )
+curve = SubResource( 12 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathCarAI/PathCar4"]
+position = Vector2( -41.2424, -55.3677 )
+rotation = -0.0239666
+
+[node name="Car" parent="PathCarAI/PathCar4/PathFollow2D" instance=ExtResource( 5 )]
+texture = ExtResource( 31 )
+
+[node name="PathHumanAI" type="Node2D" parent="."]
+z_index = 2
+
+[node name="PathHuman1" type="Path2D" parent="PathHumanAI"]
+position = Vector2( -290.99, 79.2845 )
+curve = SubResource( 13 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman1"]
+position = Vector2( 1089.06, 461.03 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman1/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="PathHuman2" type="Path2D" parent="PathHumanAI"]
+position = Vector2( 207.383, -40.8188 )
+curve = SubResource( 14 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman2"]
+position = Vector2( 1088.66, 460.755 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman2/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="PathHuman3" type="Path2D" parent="PathHumanAI"]
+position = Vector2( -533.053, 444.333 )
+curve = SubResource( 15 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman3"]
+position = Vector2( 1087.54, 460.803 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman3/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="PathHuman4" type="Path2D" parent="PathHumanAI"]
+position = Vector2( -54.283, 270.463 )
+curve = SubResource( 16 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman4"]
+position = Vector2( 1085.4, 461.496 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman4/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="PathHuman5" type="Path2D" parent="PathHumanAI"]
+position = Vector2( -506.685, -218.938 )
+curve = SubResource( 17 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman5"]
+position = Vector2( 1086.31, 462.388 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman5/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="PathHuman6" type="Path2D" parent="PathHumanAI"]
+position = Vector2( 150.251, 915.599 )
+curve = SubResource( 18 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathHumanAI/PathHuman6"]
+position = Vector2( 1085.93, 463.267 )
+rotation = -0.0124873
+rotate = false
+
+[node name="Human" parent="PathHumanAI/PathHuman6/PathFollow2D" instance=ExtResource( 23 )]
+
+[node name="LimitArea" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="LimitArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitArea/Top"]
+position = Vector2( 816.222, -6.36397 )
+shape = SubResource( 19 )
+
+[node name="Bottom" type="StaticBody2D" parent="LimitArea"]
+position = Vector2( 17.0089, 1477.93 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitArea/Bottom"]
+position = Vector2( 797.679, 0 )
+shape = SubResource( 19 )
+
+[node name="Left" type="StaticBody2D" parent="LimitArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitArea/Left"]
+position = Vector2( -6.08716, 708.514 )
+shape = SubResource( 20 )
+
+[node name="Right" type="StaticBody2D" parent="LimitArea"]
+position = Vector2( 1869.49, 227.198 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitArea/Right"]
+position = Vector2( -6.08716, 506.471 )
+shape = SubResource( 20 )
+
+[node name="InterfeLayer" type="CanvasLayer" parent="."]
+
+[node name="WoodFrameSoap" type="TextureRect" parent="InterfeLayer"]
+margin_right = 150.0
+margin_bottom = 60.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InterfeLayer/WoodFrameSoap"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -22.0
+margin_right = 51.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Soap" type="TextureRect" parent="InterfeLayer/WoodFrameSoap/HBoxContainer"]
+margin_right = 57.0
+margin_bottom = 44.0
+texture = ExtResource( 19 )
+
+[node name="X" type="Label" parent="InterfeLayer/WoodFrameSoap/HBoxContainer"]
+margin_left = 61.0
+margin_top = 4.0
+margin_right = 82.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 21 )
+text = "X"
+
+[node name="Value" type="Label" parent="InterfeLayer/WoodFrameSoap/HBoxContainer"]
+margin_left = 86.0
+margin_top = 4.0
+margin_right = 102.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 21 )
+text = "3"
+
+[node name="WoodFrameTimer" type="TextureRect" parent="InterfeLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -150.0
+margin_bottom = 60.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Second" type="Label" parent="InterfeLayer/WoodFrameTimer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -18.0
+margin_top = -21.6622
+margin_right = 18.0
+margin_bottom = 13.3378
+custom_fonts/font = SubResource( 22 )
+text = "45"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndStageFrame" parent="InterfeLayer" instance=ExtResource( 20 )]
+pause_mode = 2
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -206.0
+margin_top = -148.5
+margin_right = 206.0
+margin_bottom = 148.5
+
+[node name="IntroStage" parent="InterfeLayer" instance=ExtResource( 26 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -141.5
+margin_right = 202.0
+margin_bottom = 141.5
+
+[node name="CountdownStage" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="CountdownStage" to="." method="_on_CountdownStage_timeout"]
